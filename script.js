@@ -14,14 +14,26 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Form submit
-function handleSubmit(e) {
+
+function sendEmail(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = '✅ Message Sent!';
-  btn.style.background = '#10b981';
-  setTimeout(() => {
-    btn.textContent = 'Send Message ✉️';
-    btn.style.background = '';
-    e.target.reset();
-  }, 3000);
+
+  const form = e.target;
+
+  emailjs.send("service_yodfvhf", "template_0go4iy4", {
+    from_name: form[0].value,
+    email: form[2].value,
+    message: form[3].value
+  })
+  .then(() => {
+    const btn = form.querySelector('button');
+    btn.textContent = '✅ Message Sent!';
+    btn.style.background = '#10b981';
+    form.reset();
+  })
+  .catch(() => {
+    alert("Error sending ❌");
+  });
 }
+
+
