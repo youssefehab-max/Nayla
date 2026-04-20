@@ -69,7 +69,7 @@ const i18n = {
     teacherSubjects: [
       'Programming Mentor',
       'Programming Mentor',
-      'Volunteer Mentor',
+      'Programming Mentor',
       'Volunteer Mentor',
       'Volunteer Mentor',
       'High School Student',
@@ -189,7 +189,7 @@ const i18n = {
     teacherSubjects: [
       'مرشد برمجة',
       'مرشد برمجة',
-      'مرشدة متطوعة',
+      'مرشدة برمجة',
       'مرشدة متطوعة',
       'مرشدة متطوعة',
       'طالبة ثانوي',
