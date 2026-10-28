@@ -290,7 +290,16 @@ html[dir="rtl"] .bar-fill { background: linear-gradient(270deg, var(--amber), #F
 /* ---------- Team ---------- */
 .sub-head { font-size: 1.25rem; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
 .sub-head::after { content: ''; flex: 1; height: 1px; background: var(--line); }
-.founders { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 56px; }
+.founders { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px; }
+.ops-wrap { display: flex; justify-content: center; margin-bottom: 56px; }
+.ops {
+  display: flex; align-items: center; gap: 16px; padding: 14px 22px 14px 14px; border-radius: var(--radius-lg);
+  background: var(--cream-2); border: 1px solid var(--line); min-width: min(100%, 340px);
+}
+html[dir="rtl"] .ops { padding: 14px 14px 14px 22px; }
+.ops img { width: 84px; height: 84px; object-fit: cover; object-position: center 22%; border-radius: var(--radius); flex-shrink: 0; }
+.ops h4 { font-size: 1.1rem; }
+.ops .founder-role { margin: 4px 0 0; }
 .founder {
   display: grid; grid-template-columns: 150px 1fr; gap: 22px; align-items: start;
   padding: 22px; border-radius: var(--radius-lg); background: var(--cream-2); border: 1px solid var(--line);
@@ -300,7 +309,7 @@ html[dir="rtl"] .bar-fill { background: linear-gradient(270deg, var(--amber), #F
 .founder-role { display: inline-block; margin: 4px 0 10px; font-size: .82rem; font-weight: 600; color: var(--maroon); background: var(--cream); padding: 2px 10px; border-radius: 999px; }
 .founder p { color: var(--muted); font-size: .93rem; line-height: 1.7; }
 
-.team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 960px; margin-inline: auto; }
 .member { text-align: center; }
 .member img {
   width: 100%; aspect-ratio: 1; object-fit: cover; object-position: center 22%;
@@ -393,7 +402,6 @@ html[dir="rtl"] .field input[dir="ltr"] { text-align: right; }
 @media (max-width: 1080px) {
   .nav-links a { padding: 8px 9px; font-size: .9rem; }
   .goals-list { grid-template-columns: repeat(2, 1fr); }
-  .team-grid { grid-template-columns: repeat(4, 1fr); }
   .roles { grid-template-columns: repeat(3, 1fr); }
 }
 

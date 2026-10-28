@@ -24,8 +24,8 @@ window.NAYLA_DATA = {
       title: { ar: 'What is STEAM?', en: 'What is STEAM?' },
       format: { ar: 'أونلاين · 4 أيام · مجاني', en: 'Online · 4 days · Free' },
       desc: {
-        ar: 'برنامج أونلاين بيعرّف بنات أسوان والصعيد بمجالات الـ STEAM وأهميتها، ويعرض قصص نجاح لبنات في المجال، ويساعدهم ياخدوا أول خطوة عملية.',
-        en: 'An online program introducing girls in Aswan and Upper Egypt to STEAM fields and why they matter, sharing success stories of women in the field and helping each girl take her first practical step.'
+        ar: 'برنامج أونلاين بيعرّف شباب أسوان والصعيد بمجالات الـ STEAM وأهميتها، ويعرض قصص نجاح ملهمة في المجال، ويساعد كل مشارك ياخد أول خطوة عملية.',
+        en: 'An online program introducing young people in Aswan and Upper Egypt to STEAM fields and why they matter, sharing inspiring success stories and helping each participant take their first practical step.'
       },
       highlights: {
         ar: ['شهادة مشاركة', 'جلسات ملهمة', 'تفاعلي بالكامل'],
@@ -40,11 +40,11 @@ window.NAYLA_DATA = {
       title: { ar: 'Code with Nayla', en: 'Code with Nayla' },
       format: { ar: 'أوفلاين في أسوان + أونلاين · 12–19 سنة', en: 'Offline in Aswan + Online · Ages 12–19' },
       desc: {
-        ar: 'برنامج برمجة للبنات المبتدئات تمامًا بدون أي خبرة سابقة: أساسيات لغة ++C والتفكير البرمجي، بتطبيق عملي وتوجيه مباشر من مهندسين متخصصين.',
+        ar: 'برنامج برمجة للمبتدئين تمامًا بدون أي خبرة سابقة: أساسيات لغة ++C والتفكير البرمجي، بتطبيق عملي وتوجيه مباشر من مهندسين متخصصين.',
         en: 'A coding program for complete beginners — no experience needed. C++ fundamentals and computational thinking, with hands-on practice and direct mentoring from engineers.'
       },
       highlights: {
-        ar: ['لابتوب متوفر للمشاركات في أسوان', 'جلسات أونلاين للبنات خارج أسوان', 'تطبيق عملي'],
+        ar: ['لابتوب متوفر للمشاركين في أسوان', 'جلسات أونلاين للي برّه أسوان', 'تطبيق عملي'],
         en: ['Laptops provided in Aswan', 'Online sessions outside Aswan', 'Hands-on practice']
       }
     },
@@ -88,8 +88,8 @@ window.NAYLA_DATA = {
       title: { ar: 'Ready, NOT Perfect', en: 'Ready, NOT Perfect' },
       format: { ar: 'جلسة تجهيز لمعسكر Kode With Klossy', en: 'Kode With Klossy prep session' },
       desc: {
-        ar: 'جلسة إعداد ذهني وعملي للبنات المتقدمات لمعسكرات التكنولوجيا العالمية: تخطي حاجز اللغة والأكسنت، فهم طبيعة المعسكر، والتعامل مع التحديات والعمل في فرق متعددة الثقافات.',
-        en: 'Mental and practical prep for girls applying to global tech camps: getting past language and accent barriers, understanding the camp, handling challenges and working in multicultural teams.'
+        ar: 'جلسة إعداد ذهني وعملي للمتقدمين لمعسكرات التكنولوجيا العالمية: تخطي حاجز اللغة والأكسنت، فهم طبيعة المعسكر، والتعامل مع التحديات والعمل في فرق متعددة الثقافات.',
+        en: 'Mental and practical prep for applicants to global tech camps: getting past language and accent barriers, understanding the camp, handling challenges and working in multicultural teams.'
       },
       highlights: { ar: [], en: [] }
     },
@@ -137,22 +137,29 @@ window.NAYLA_DATA = {
   /* ---------- TEAM ---------- */
   founders: [
     {
-      name: { ar: 'ملك عدلان', en: 'Malak Adlan' },
-      photo: 'malak.jpeg',
-      bio: {
-        ar: 'طالبة ثانوي شغوفة بالتكنولوجيا والعمل المجتمعي وبناء أفكار ليها أثر حقيقي. شاركت في Samsung Innovation Campus وGirls Make، ومهتمة بحل مشكلات حياة الطلاب، وإتاحة الوصول، والصحة النفسية.',
-        en: 'A high school student passionate about technology, community work and ideas with real impact. Alumna of Samsung Innovation Campus and Girls Make, focused on student life, accessibility and mental well-being.'
-      }
-    },
-    {
       name: { ar: 'تقوى مجدي', en: 'Taqwa Magdy' },
       photo: 'takwa.jpeg',
       bio: {
-        ar: 'شغوفة بالتكنولوجيا والابتكار، وعندها مهارات في البرمجة والجرافيك ديزاين والأمن السيبراني. قدّمت جلسات توعية في أسوان عن البرمجة والذكاء الاصطناعي، ومنسق عام في نقابة المخترعين المصريين، وخريجة Girls Make.',
-        en: 'Passionate about technology and innovation, with skills in programming, graphic design and cybersecurity. Has delivered awareness sessions on programming and AI across Aswan; General Coordinator at the Egyptian Inventors Syndicate and a Girls Make graduate.'
+        ar: 'تقوى مجدي محمود قائدة طلابية وكاتبة ومهتمة بالتكنولوجيا من أسوان، شغوفة بالبرمجة والروبوتكس والابتكار وتمكين الشباب. بخبرتها في تنسيق المشاريع والتحدث أمام الجمهور والعمل المجتمعي، بتسعى تخلق فرص حقيقية للشباب وتشجعهم يستكشفوا مجالات الـ STEAM. مؤمنة بقوة التعلم والإبداع والقيادة في تحويل الأفكار لأثر حقيقي.',
+        en: 'Taqwa Magdy Mahmoud is a student leader, writer, and technology enthusiast from Aswan, Egypt, passionate about programming, robotics, innovation, and youth empowerment. With experience in project coordination, public speaking, and community engagement, she strives to create meaningful opportunities for young people and encourage them to explore STEAM fields. She believes in the power of learning, creativity, and leadership to turn ideas into real-world impact.'
+      }
+    },
+    {
+      name: { ar: 'ملك عدلان', en: 'Malak Adlan' },
+      photo: 'malak.jpeg',
+      bio: {
+        ar: 'ملك عدلان قائدة طلابية ومهتمة بالتكنولوجيا من أسوان، شغوفة بالعمل المجتمعي وبناء أفكار ليها أثر حقيقي. بخبرتها في العمل على المشاريع وتنظيم الفعاليات والتطوع، بتهتم بحل مشكلات واقعية في حياة الطلاب وإتاحة الوصول والصحة النفسية. مؤمنة إن التعلم المستمر وقبول التحديات هما الطريق لفتح فرص جديدة للشباب.',
+        en: 'Malak Adlan is a student leader and technology enthusiast from Aswan, Egypt, passionate about community work and building ideas that create real impact. With experience in project work, event organization, and volunteering, she focuses on solving real-life problems in student life, accessibility, and mental well-being. She believes that continuous learning and embracing new challenges are the way to open new opportunities for young people.'
       }
     }
   ],
+
+  /* Shown right under the founders */
+  operations: {
+    name: { ar: 'سما كرم', en: 'Sama Karam' },
+    photo: 'sama karam.jpeg',
+    role: { ar: 'Operations Manager', en: 'Operations Manager' }
+  },
 
   team: [
     { name: { ar: 'م. يوسف إيهاب', en: 'Eng. Youssef Ehab' }, photo: 'youssef.jpeg',
@@ -162,27 +169,15 @@ window.NAYLA_DATA = {
     { name: { ar: 'م. فرح عبده', en: 'Eng. Farah Abdo' }, photo: 'farah.jpeg',
       role: { ar: 'منتور متطوعة · Community Lead', en: 'Volunteer Mentor · Community Lead' } },
     { name: { ar: 'خديجة البدوي', en: 'Khadija Elbedwehy' }, photo: 'khadija.jpeg',
-      role: { ar: 'منتور متطوعة · البحث العلمي', en: 'Volunteer Mentor · Research' } },
-    { name: { ar: 'م. فاطمة أحمد', en: 'Eng. Fatima Ahmed' }, photo: 'fatima.jpeg',
-      role: { ar: 'منتور متطوعة · Soft Skills', en: 'Volunteer Mentor · Soft Skills' } },
-    { name: { ar: 'م. تحية أيمن', en: 'Eng. Tahya Ayman' }, photo: 'tahia.jpeg',
-      role: { ar: 'مهندسة طاقة · التواصل والتوعية', en: 'Energy Engineer · Communication & Outreach' } },
-    { name: { ar: 'رودينا أمجد', en: 'Rodina Amgad' }, photo: 'rodina.jpeg',
-      role: { ar: 'كتابة المحتوى', en: 'Content Writing' } },
-    { name: { ar: 'سما سعد', en: 'Sama Saad' }, photo: 'sama.jpeg',
-      role: { ar: 'التنظيم والإدارة', en: 'Organization & Management' } },
-    { name: { ar: 'سما كرم', en: 'Sama Karam' }, photo: 'sama karam.jpeg',
-      role: { ar: 'التنظيم والإدارة', en: 'Organization & Management' } },
-    { name: { ar: 'جنى علي', en: 'Jana Ali' }, photo: 'jana.jpeg',
-      role: { ar: 'التواصل والتوعية', en: 'Communication & Outreach' } }
+      role: { ar: 'منتور متطوعة · البحث العلمي', en: 'Volunteer Mentor · Research' } }
   ],
 
   /* ---------- PARTNERS ---------- */
   partners: [
     {
       name: 'Girl Up',
-      note: { ar: 'مبادرة تابعة لمؤسسة الأمم المتحدة — نايلة جزء من شبكة Girl Up MENA وبتدعم شهادات كورس التسويق.',
-              en: 'A UN Foundation initiative — Nayla is part of the Girl Up MENA network, which backs our marketing course certificates.' }
+      note: { ar: 'مبادرة تابعة لمؤسسة الأمم المتحدة — داعم شهادات كورس التسويق الرقمي.',
+              en: 'A UN Foundation initiative — supporting our digital marketing course certificates.' }
     },
     {
       name: 'Urbanbears Network',
