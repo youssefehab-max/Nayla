@@ -1,448 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nayla | STEAM Like a Girl</title>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>Nayla | STEAM Like a Girl — نايلة</title>
+<meta name="description" content="Nayla is a girls-led initiative from Aswan opening STEAM opportunities for girls in Upper Egypt through free online and offline programs. نايلة مبادرة من بنات أسوان بتوصّل فرص STEAM لبنات الصعيد.">
+<meta property="og:title" content="Nayla | STEAM Like a Girl">
+<meta property="og:description" content="A girls-led initiative from Aswan opening STEAM opportunities for girls in Upper Egypt.">
+<meta property="og:image" content="malak.jpeg">
+<meta name="theme-color" content="#8C3033">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%238C3033'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='38' fill='%23FFEEE1'>N</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav id="navbar">
-  <a class="nav-logo">
-    <span>📚</span>
-    Nayla
-  </a>
-  <ul class="nav-links">
-    <li><a href="#Hero">Home</a></li>
-    <li><a href="#Subjects">Programs</a></li>
-    <li><a href="#Teachers">Team Members</a></li>
-    <li><a href="#About">About</a></li>
-    <li><a href="#Contact">Contact</a></li>
-  </ul>
-  <div class="nav-actions">
-    <a href="#About" class="btn btn-outline">Join Us</a>
-    <a href="#Contact" class="btn btn-primary">Learn More</a>
-    <button id="langToggle" type="button" class="btn btn-outline">AR</button>
-  </div>
-</nav>
+<a class="skip-link" href="#main" data-i18n="skip">تخطي للمحتوى</a>
 
-<!-- HERO -->
-<section id="Hero">
-  <div class="hero-grid">
-    <div class="hero-brand-card reveal">
-      <div class="hero-brand-frame">
-        <div class="hero-brand-box">
-          <h1>Nayla</h1>
-          <p>STEAM Like a Girl</p>
-        </div>
-      </div>
-    </div>
-    <div class="hero-content reveal">
-      <div class="hero-top-row">
-        <span class="hero-badge">Empowering Girls in Aswan Through STEAM</span>
-        <span class="hero-partner">Girl Up MENA</span>
-      </div>
-      <div class="hero-text-block">
-        <h2><span>Nayla | STEAM Like a Girl</span></h2>
-      </div>
-      <div class="hero-text-block">
-        <h2><span>Empowering girls in Aswan</span> through online sessions, offline events, and real opportunities. هدفنا نوصل الفرص لبنات الصعيد ونبني <bdi>community</bdi> قوية من بنات لبعض.</h2>
-      </div>
-      <div class="hero-actions">
-        <a href="#About" class="btn btn-primary btn-large">Join Us</a>
-        <a href="#Contact" class="btn btn-outline btn-large">Learn More</a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ================= NAVBAR ================= -->
+<header id="navbar">
+  <div class="nav-inner container">
+    <a class="brand" href="#top" aria-label="Nayla">
+      <span class="brand-mark">N</span>
+      <span class="brand-text">
+        <strong>Nayla</strong>
+        <small>STEAM Like a Girl</small>
+      </span>
+    </a>
 
-<!-- ABOUT -->
-<section id="About">
-  <div class="about-grid reveal">
-    <div class="about-text">
-      <div class="section-tag">About Nayla</div>
-      <h2>A Girls-Led Initiative <span>From Aswan</span></h2>
-      <p>احنا مبادرة من بنات أسوان هدفنا نوصل فرص STEAM لكل بنت. As part of Girl Up MENA, we create safe spaces where girls can learn, lead, and grow together.</p>
-      <div class="about-features">
-        <div class="feature-item">
-          <div class="feature-icon">📖</div>
-          <div>
-            <h4>Empowerment First</h4>
-            <p>بنشتغل عشان كل بنت تحس إنها قادرة تدخل مجالات STEAM بثقة.</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">👩‍🏫</div>
-          <div>
-            <h4>Girl Up MENA Network</h4>
-            <p>Connected to a regional movement that supports girls' leadership and impact.</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">🕐</div>
-          <div>
-            <h4>Community & Belonging</h4>
-            <p>Online and offline in Aswan, we learn together and support each other.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="about-visual">
-      <div class="about-stat-card">
-        <div class="num">1200+</div>
-        <div class="lbl">Girls Reached</div>
-      </div>
-      <div class="about-stat-card">
-        <div class="num">85+</div>
-        <div class="lbl">Sessions Held</div>
-      </div>
-      <div class="about-stat-card">
-        <div class="num">60+</div>
-        <div class="lbl">Volunteers</div>
-      </div>
-      <div class="about-stat-card">
-        <div class="num">30+</div>
-        <div class="lbl">Aswan Events</div>
-      </div>
-    </div>
-  </div>
-</section>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#about" data-i18n="navAbout">عن نايلة</a>
+      <a href="#programs" data-i18n="navPrograms">البرامج</a>
+      <a href="#impact" data-i18n="navImpact">أثرنا</a>
+      <a href="#team" data-i18n="navTeam">الفريق</a>
+      <a href="#partners" data-i18n="navPartners">الشركاء</a>
+      <a href="#contact" data-i18n="navContact">تواصل</a>
+      <a href="#join" class="btn btn-primary nav-cta-mobile" data-i18n="navJoin">انضم لنايلة</a>
+    </nav>
 
-<!-- SUBJECTS -->
-<section id="Subjects">
-  <div class="section-header reveal">
-    <div class="section-tag">Programs</div>
-    <h2>Our Programs</h2>
-    <p>Practical learning tracks designed to open real STEAM opportunities for girls in Upper Egypt.</p>
-  </div>
-  <div class="subjects-grid">
-    <div class="subject-card reveal">
-      <div class="subject-icon">💻</div>
-      <h3>Programming</h3>
-      <p>Learn coding basics and build real projects in a friendly, beginner-safe environment.</p>
-      <div class="subject-meta">
-        <div class="meta-item"><span class="meta-num">340</span><span class="meta-lbl">Girls</span></div>
-        <div class="meta-item"><span class="meta-num">22</span><span class="meta-lbl">Sessions</span></div>
-      </div>
-    </div>
-    <div class="subject-card reveal">
-      <div class="subject-icon">🛠️</div>
-      <h3>Engineering Basics</h3>
-      <p>Discover how engineering works through simple challenges and creative teamwork.</p>
-      <div class="subject-meta">
-        <div class="meta-item"><span class="meta-num">280</span><span class="meta-lbl">Girls</span></div>
-        <div class="meta-item"><span class="meta-num">16</span><span class="meta-lbl">Sessions</span></div>
-      </div>
-    </div>
-    <div class="subject-card reveal">
-      <div class="subject-icon">🔬</div>
-      <h3>Science Workshops</h3>
-      <p>Hands-on activities that make science fun, practical, and easy to relate to daily life.</p>
-      <div class="subject-meta">
-        <div class="meta-item"><span class="meta-num">310</span><span class="meta-lbl">Girls</span></div>
-        <div class="meta-item"><span class="meta-num">20</span><span class="meta-lbl">Workshops</span></div>
-      </div>
-    </div>
-    <div class="subject-card reveal">
-      <div class="subject-icon">🌟</div>
-      <h3>Personal Development</h3>
-      <p>Build confidence, leadership, and communication skills for school, university, and beyond.</p>
-      <div class="subject-meta">
-        <div class="meta-item"><span class="meta-num">270</span><span class="meta-lbl">Girls</span></div>
-        <div class="meta-item"><span class="meta-num">14</span><span class="meta-lbl">Circles</span></div>
-      </div>
-    </div>
-    <div class="subject-card reveal">
-      <div class="subject-icon">🧠</div>
-      <h3>Career Exploration</h3>
-      <p>Meet women in STEAM careers and explore pathways that fit your passion.</p>
-      <div class="subject-meta">
-        <div class="meta-item"><span class="meta-num">190</span><span class="meta-lbl">Girls</span></div>
-        <div class="meta-item"><span class="meta-num">9</span><span class="meta-lbl">Talks</span></div>
-      </div>
-    </div>
-    <div class="subject-card reveal">
-      <div class="subject-icon">🤝</div>
-      <h3>Community Projects</h3>
-      <p>Girls-led initiatives that turn ideas into local impact across Aswan.</p>
-      <div class="subject-meta">
-        <div class="meta-item"><span class="meta-num">140</span><span class="meta-lbl">Girls</span></div>
-        <div class="meta-item"><span class="meta-num">7</span><span class="meta-lbl">Projects</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TEACHERS -->
-<section id="Teachers">
-  <div class="section-header reveal">
-    <div class="section-tag">Team Members</div>
-    <h2>Meet Our Team Members</h2>
-    <p>Supportive role models from engineering, universities, and volunteering communities.</p>
-  </div>
-  <div class="teachers-grid">
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="youssef.jpeg" alt="Eng. Youssef Ehab">
-      </div>
-      <h4>Eng. Youssef Ehab</h4>
-      <div class="teacher-subject">Programming Mentor</div>
-      <div class="teacher-exp">⭐ Software Engineer</div>
-      <p class="teacher-bio">Guides girls in problem-solving and Programming thinking in many Domains.</p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="ahmed.jpeg" alt="Eng. Ahmed Abdullah">
-      </div>
-      <h4>Eng. Ahmed Abdullah</h4>
-      <div class="teacher-subject">Programming Mentor</div>
-      <div class="teacher-exp">⭐ Engineer</div>
-      <p class="teacher-bio">Connects technical skills to real-life community solutions.</p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="farah.jpeg" alt="Eng. Farah Abdo">
-      </div>
-      <h4>Eng. Farah Abdo</h4>
-      <div class="teacher-subject">Volunteer Mentor</div>
-      <div class="teacher-exp">⭐ Community Lead</div>
-      <p class="teacher-bio">Builds a safe and inspiring space for every participant.</p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="khadija.jpeg" alt="Eng. Khadija elBadawy">
-      </div>
-      <h4>Eng. Khadija elBadawy </h4>
-      <div class="teacher-subject">Volunteer Mentor</div>
-      <div class="teacher-exp">⭐ Mentor</div>
-      <p class="teacher-bio"> Guides Girls In Their Learning Journey </p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="fatima.jpeg" alt="Eng. Fatima Ahmed">
-      </div>
-      <h4>Eng. Fatima Ahmed</h4>
-      <div class="teacher-subject">Volunteer Mentor</div>
-      <div class="teacher-exp">⭐ University Student</div>
-      <p class="teacher-bio">Empowering girls with essential soft skills to grow, communicate, and succeed in real life.
-From confidence to career readiness—learn it, practice it, live it. </p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="rodina.jpeg" alt="Rodina Amgad">
-      </div>
-      <h4>Rodina Amgad</h4>
-      <div class="teacher-subject">High School Student</div>
-      <div class="teacher-exp">⭐ Content Writing</div>
-      <p class="teacher-bio">Creates engaging content to inspire and inform the Nayla community.</p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="sama.jpeg" alt="Sama Saad">
-      </div>
-      <h4>Sama Saad</h4>
-      <div class="teacher-subject">High School Student</div>
-      <div class="teacher-exp">⭐ Organization & Management</div>
-      <p class="teacher-bio">Organizes and manages various initiatives within the Nayla community.</p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="sama karam.jpeg" alt="Sama Karam">
-      </div>
-      <h4>Sama Karam</h4>
-      <div class="teacher-subject">High School Student</div>
-      <div class="teacher-exp">⭐ Organization & Management</div>
-      <p class="teacher-bio">Organizes and manages various initiatives within the Nayla community.</p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="jana.jpeg" alt="Jana Ali">
-      </div>
-      <h4>Jana Ali</h4>
-      <div class="teacher-subject">High School Student</div>
-      <div class="teacher-exp">⭐ Communication & Outreach</div>
-      <p class="teacher-bio">Communicates with the Nayla community and organizes outreach initiatives.</p>
-    </div>
-    <div class="teacher-card reveal">
-      <div class="teacher-avatar">
-        <img src="tahia.jpeg" alt="Tahia Ayman">
-      </div>
-      <h4>Tahya Ayman</h4>
-      <div class="teacher-subject">Energy Engineer</div>
-      <div class="teacher-exp">⭐ Communication & Outreach</div>
-      <p class="teacher-bio">comunicates with the students and organizes outreach initiatives.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDERS -->
-<section id="Founders">
-  <div class="section-header reveal">
-    <div class="section-tag">Founders</div>
-    <h2>Meet the Founders 💜</h2>
-    <p>Two passionate young leaders building Nayla to empower girls in Aswan through community, innovation, and STEAM.</p>
-  </div>
-
-  <div class="founder-row reveal">
-    <div class="founder-text">
-      <div class="founder-line"></div>
-      <h3>Malak Adlan</h3>
-      <div class="founder-role">Founder of Nayla</div>
-      <p>Hi, I&apos;m Malak 👋<br>
-      A high school student passionate about technology, community work, and building ideas that create real impact.<br><br>
-      I&apos;ve been part of experiences like Samsung Innovation Campus and Girls Make Program, working on projects, organizing sessions, and volunteering.<br><br>
-      I&apos;m especially interested in solving real-life problems in student life, accessibility, and mental well-being.<br><br>
-      Still learning, still growing, and always ready for new challenges 🚀</p>
-      <div class="founder-social">@nayla_stemaswan</div>
-    </div>
-    <div class="founder-image-wrap">
-      <div class="founder-image-frame">
-        <img src="malak.jpeg" alt="Malak Adlan - Founder of Nayla">
-      </div>
-    </div>
-  </div>
-
-  <div class="founder-row reverse reveal">
-    <div class="founder-text">
-      <div class="founder-line"></div>
-      <h3>Taqwa Magdy</h3>
-      <div class="founder-role">Founder of Nayla</div>
-      <p>Hi, I&apos;m Taqwa 👋<br>
-      I&apos;m passionate about technology &amp; innovation, with skills in programming, graphic design, and cybersecurity.<br><br>
-      I&apos;ve delivered awareness sessions across Aswan to promote programming and AI.<br><br>
-      Currently, I&apos;m a General Coordinator at the Egyptian Inventors Syndicate and a Girls Make graduate.</p>
-      <div class="founder-social">@nayla_stemaswan</div>
-    </div>
-    <div class="founder-image-wrap">
-      <div class="founder-image-frame">
-        <img src="takwa.jpeg" alt="Taqwa Magdy - Founder of Nayla">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS BANNER -->
-<div class="stats-banner">
-  <div class="banner-stat reveal">
-    <span class="num">1200+</span>
-    <span class="lbl">Girls Reached</span>
-  </div>
-  <div class="banner-stat reveal">
-    <span class="num">85+</span>
-    <span class="lbl">Sessions Held</span>
-  </div>
-  <div class="banner-stat reveal">
-    <span class="num">60+</span>
-    <span class="lbl">Volunteers</span>
-  </div>
-  <div class="banner-stat reveal">
-    <span class="num">30+</span>
-    <span class="lbl">Aswan Events</span>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<section id="Contact">
-  <div class="contact-grid reveal">
-    <div class="contact-info">
-      <div class="section-tag">Contact</div>
-      <h2>Let&apos;s Build This Together!<br>We&apos;d Love to Hear from You 💜</h2>
-      <p>عندك سؤال؟ حابة تنضمي؟ or want to collaborate with Nayla? Send us a message anytime — we are one community.</p>
-      <div class="contact-detail">
-        <div class="icon">📧</div>
-        <span>naylasteamaswan@gmail.com</span>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">📞</div>
-        <span>01157320251</span>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">📍</div>
-        <span>Aswan, Egypt (Online + Offline Events)</span>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">🔗</div>
-        <span>linktr.ee/naylasteam</span>
-      </div>
-    </div>
-    <form class="contact-form" onsubmit="sendEmail(event)">
-      <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="Your name">
-        </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Family name">
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="you@example.com">
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea rows="5" placeholder="Say hello to Nayla community..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary btn-large" style="width:100%; justify-content:center;">
-        Send to Nayla ✉️
+    <div class="nav-actions">
+      <button id="langToggle" type="button" class="lang-btn" aria-label="Switch language">EN</button>
+      <a href="#join" class="btn btn-primary nav-cta" data-i18n="navJoin">انضم لنايلة</a>
+      <button id="menuToggle" class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
       </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section id="top" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" data-i18n="heroEyebrow">مبادرة من بنات أسوان · جزء من Girl Up MENA</span>
+      <h1>
+        <span class="hero-wordmark">Nayla</span>
+        <span class="hero-tagline" data-i18n="heroTitle">بنفتح أبواب الـ STEAM لكل بنت في الصعيد</span>
+      </h1>
+      <p class="hero-lead" data-i18n="heroLead">برامج وكورسات وورش مجانية — أونلاين وأوفلاين في أسوان — في البرمجة، والتسويق، والتصميم، والبحث العلمي، والجاهزية لسوق العمل. ومجتمع من البنات بيدعم بعضه.</p>
+      <div class="hero-actions">
+        <a href="#programs" class="btn btn-primary btn-lg" data-i18n="heroCta1">اكتشف البرامج</a>
+        <a href="#join" class="btn btn-ghost btn-lg" data-i18n="heroCta2">انضم لينا</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt class="js-total-participants">306+</dt><dd data-i18n="statParticipants">مشارِكة ومشارك</dd></div>
+        <div><dt class="js-program-count">8</dt><dd data-i18n="statPrograms">برامج وورش</dd></div>
+        <div><dt class="js-team-size">31</dt><dd data-i18n="statTeam">عضو في الفريق</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="photo-stack">
+        <img src="malak.jpeg" alt="" class="ps ps-1" loading="eager">
+        <img src="takwa.jpeg" alt="" class="ps ps-2" loading="eager">
+        <img src="sama.jpeg" alt="" class="ps ps-3" loading="eager">
+      </div>
+      <span class="chip chip-1" data-i18n="chip1">💻 Code with Nayla</span>
+      <span class="chip chip-2" data-i18n="chip2">📍 أسوان + أونلاين</span>
+      <span class="chip chip-3" data-i18n="chip3">✨ مجاني بالكامل</span>
+    </div>
+  </div>
+  <div class="nubian-band" aria-hidden="true"></div>
+</section>
+
+<!-- ================= ABOUT / VISION / GOALS ================= -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-intro">
+        <span class="section-tag" data-i18n="aboutTag">عن نايلة</span>
+        <h2 data-i18n="aboutTitle">مبادرة بتقودها البنات، من أسوان</h2>
+        <p data-i18n="aboutBody1">نايلة مبادرة أسستها بنات من أسوان عشان توصّل فرص التعلم في مجالات الـ STEAM — العلوم والتكنولوجيا والهندسة والفنون والرياضيات — لبنات أسوان والصعيد، اللي غالبًا الفرص دي مش بتوصلهم.</p>
+        <p data-i18n="aboutBody2">كجزء من شبكة Girl Up MENA، بنعمل برامج أونلاين وفعاليات على الأرض في أسوان، وبنبني مساحة آمنة البنت تتعلم فيها وتجرب وتقود.</p>
+      </div>
+
+      <div class="vm-cards">
+        <article class="vm-card vm-vision">
+          <span class="vm-icon">👁️</span>
+          <h3 data-i18n="visionTitle">رؤيتنا</h3>
+          <p data-i18n="visionBody">إن كل بنت في أسوان والصعيد يبقى عندها فرصة حقيقية تدخل مجالات الـ STEAM بثقة، وتبني مستقبلها اللي تختاره.</p>
+        </article>
+        <article class="vm-card">
+          <span class="vm-icon">🎯</span>
+          <h3 data-i18n="missionTitle">رسالتنا</h3>
+          <p data-i18n="missionBody">نوصّل برامج تعليمية وتدريبية مجانية — أونلاين وأوفلاين — لبنات الصعيد، ونبني مجتمع من البنات بيدعم بعضه.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="goals">
+      <h3 class="goals-title" data-i18n="goalsTitle">أهدافنا</h3>
+      <ol class="goals-list">
+        <li><span class="goal-num">01</span><div><h4 data-i18n="goal1Title">نعرّف بمجالات الـ STEAM</h4><p data-i18n="goal1Body">نكسر الصورة إن المجالات دي "مش للبنات"، ونعرض قصص نجاح قريبة منهم.</p></div></li>
+        <li><span class="goal-num">02</span><div><h4 data-i18n="goal2Title">نعلّم مهارات عملية</h4><p data-i18n="goal2Body">برمجة، تسويق رقمي، تصميم، وبحث علمي — بتطبيق حقيقي من أول يوم.</p></div></li>
+        <li><span class="goal-num">03</span><div><h4 data-i18n="goal3Title">نجهّز للفرص وسوق العمل</h4><p data-i18n="goal3Body">من التقديم على معسكرات عالمية لحد خبرة تطوعية تتضاف للـ CV.</p></div></li>
+        <li><span class="goal-num">04</span><div><h4 data-i18n="goal4Title">نبني مجتمع وشبكة</h4><p data-i18n="goal4Body">بنات بيدعموا بعض، وشراكات مع مؤسسات بتفتح أبواب جديدة.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMS ================= -->
+<section id="programs" class="section section-tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" data-i18n="programsTag">البرامج</span>
+      <h2 data-i18n="programsTitle">اللي بنقدمه</h2>
+      <p data-i18n="programsDesc">كل برامجنا مجانية ومصممة للمبتدئين — مش محتاج خبرة سابقة، محتاج بس تبدأ.</p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Program type">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="filterAll">الكل</button>
+      <button class="filter" data-filter="core" role="tab" aria-selected="false" data-i18n="filterCore">برامج ممتدة</button>
+      <button class="filter" data-filter="course" role="tab" aria-selected="false" data-i18n="filterCourse">كورسات</button>
+      <button class="filter" data-filter="workshop" role="tab" aria-selected="false" data-i18n="filterWorkshop">ورش وجلسات</button>
+    </div>
+
+    <div class="programs-grid" id="programsGrid"><!-- rendered from data.js --></div>
+  </div>
+</section>
+
+<!-- ================= IMPACT ================= -->
+<section id="impact" class="section impact">
+  <div class="container">
+    <div class="section-head section-head-light">
+      <span class="section-tag tag-light" data-i18n="impactTag">أثرنا</span>
+      <h2 data-i18n="impactTitle">أثرنا بالأرقام</h2>
+      <p data-i18n="impactDesc">أرقام تقريبية لعدد المشاركين في برامجنا وورشنا لحد دلوقتي.</p>
+    </div>
+
+    <div class="impact-stats">
+      <div class="impact-stat"><span class="num js-total-participants">306+</span><span class="lbl" data-i18n="statParticipantsLong">مشارك ومشاركة في برامجنا</span></div>
+      <div class="impact-stat"><span class="num js-program-count">8</span><span class="lbl" data-i18n="statProgramsLong">برامج وكورسات وورش</span></div>
+      <div class="impact-stat"><span class="num js-team-size">31</span><span class="lbl" data-i18n="statTeamLong">عضو في فريق نايلة</span></div>
+      <div class="impact-stat"><span class="num js-partner-count">3</span><span class="lbl" data-i18n="statPartnersLong">شركاء ومؤسسات متعاونة</span></div>
+    </div>
+
+    <div class="impact-bars">
+      <h3 data-i18n="barsTitle">المشاركين في كل برنامج</h3>
+      <ul id="impactBars"><!-- rendered from data.js --></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" data-i18n="teamTag">الفريق</span>
+      <h2 data-i18n="teamTitle">الناس اللي ورا نايلة</h2>
+      <p data-i18n="teamDesc">فريق من 31 عضو — طالبات ومهندسين ومتطوعين — بيشتغلوا عشان كل بنت تلاقي فرصتها.</p>
+    </div>
+
+    <h3 class="sub-head" data-i18n="foundersTitle">المؤسِّسات</h3>
+    <div class="founders" id="foundersGrid"><!-- rendered from data.js --></div>
+
+    <h3 class="sub-head" data-i18n="membersTitle">من فريقنا</h3>
+    <div class="team-grid" id="teamGrid"><!-- rendered from data.js --></div>
+  </div>
+</section>
+
+<!-- ================= PARTNERS ================= -->
+<section id="partners" class="section section-tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" data-i18n="partnersTag">الشركاء</span>
+      <h2 data-i18n="partnersTitle">شركاء النجاح</h2>
+      <p data-i18n="partnersDesc">مؤسسات وجهات اشتغلنا معاها عشان نوصّل الفرص لبنات أكتر.</p>
+    </div>
+
+    <div class="partners-grid" id="partnersGrid"><!-- rendered from data.js --></div>
+
+    <div class="collab">
+      <div class="collab-copy">
+        <h3 data-i18n="collabTitle">عايز تتعاون مع نايلة؟</h3>
+        <p data-i18n="collabBody">بنرحب بالشركات والمؤسسات والمساحات اللي حابة تدعم بنات الصعيد. ممكن نتعاون في:</p>
+      </div>
+      <ul class="collab-list">
+        <li data-i18n="collab1">🏫 استضافة برنامج أو توفير مكان في أسوان</li>
+        <li data-i18n="collab2">💻 توفير أجهزة أو أدوات للمشاركات</li>
+        <li data-i18n="collab3">🎤 تقديم جلسة أو ورشة من خبرائكم</li>
+        <li data-i18n="collab4">💼 فرص تدريب (Internships) أو منح</li>
+        <li data-i18n="collab5">🤝 رعاية برنامج أو دعم شهاداته</li>
+      </ul>
+      <a href="#join" class="btn btn-primary btn-lg" data-role="partner" data-i18n="collabCta">ابدأ شراكة معانا</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOIN ================= -->
+<section id="join" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" data-i18n="joinTag">انضم لينا</span>
+      <h2 data-i18n="joinTitle">فيه مكان ليك في نايلة</h2>
+      <p data-i18n="joinDesc">اختار الطريقة اللي تناسبك، واملا الفورم، وفريقنا هيتواصل معاك.</p>
+    </div>
+
+    <div class="roles">
+      <button class="role" type="button" data-role="participant">
+        <span class="role-icon">🎓</span>
+        <strong data-i18n="roleParticipant">مشاركة</strong>
+        <small data-i18n="roleParticipantBody">سجلي في برامجنا وورشنا الجاية</small>
+      </button>
+      <button class="role" type="button" data-role="volunteer">
+        <span class="role-icon">🙌</span>
+        <strong data-i18n="roleVolunteer">متطوع / متطوعة</strong>
+        <small data-i18n="roleVolunteerBody">ساعد في التنظيم والمحتوى والتصميم والتواصل</small>
+      </button>
+      <button class="role" type="button" data-role="trainer">
+        <span class="role-icon">🧑‍🏫</span>
+        <strong data-i18n="roleTrainer">مدرب / منتور</strong>
+        <small data-i18n="roleTrainerBody">علّم مهارة أو تابع البنات في رحلتهم</small>
+      </button>
+      <button class="role" type="button" data-role="speaker">
+        <span class="role-icon">🎤</span>
+        <strong data-i18n="roleSpeaker">Speaker</strong>
+        <small data-i18n="roleSpeakerBody">شارك قصتك أو خبرتك في جلسة ملهمة</small>
+      </button>
+      <button class="role" type="button" data-role="partner">
+        <span class="role-icon">🤝</span>
+        <strong data-i18n="rolePartner">شريك / جهة</strong>
+        <small data-i18n="rolePartnerBody">مؤسسة أو شركة حابة تتعاون معانا</small>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section section-tint">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <span class="section-tag" data-i18n="contactTag">تواصل</span>
+      <h2 data-i18n="contactTitle">يلا نبني ده سوا 💜</h2>
+      <p data-i18n="contactDesc">عندك سؤال، أو حابب تنضم، أو عايز تتعاون معانا؟ ابعتلنا وهنرد عليك في أقرب وقت.</p>
+      <ul class="contact-list">
+        <li><span class="ci">✉️</span><a href="mailto:naylasteamaswan@gmail.com">naylasteamaswan@gmail.com</a></li>
+        <li><span class="ci">📞</span><a href="tel:+201157320251" dir="ltr">0115 732 0251</a></li>
+        <li><span class="ci">📸</span><a href="https://instagram.com/nayla_stemaswan" target="_blank" rel="noopener" dir="ltr">@nayla_stemaswan</a></li>
+        <li><span class="ci">🔗</span><a href="https://linktr.ee/naylasteam" target="_blank" rel="noopener" dir="ltr">linktr.ee/naylasteam</a></li>
+        <li><span class="ci">📍</span><span data-i18n="contactLocation">أسوان، مصر — فعاليات أونلاين وأوفلاين</span></li>
+      </ul>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label class="field">
+          <span data-i18n="formName">الاسم</span>
+          <input type="text" name="name" required autocomplete="name" data-i18n-ph="formNamePh" placeholder="اسمك بالكامل">
+        </label>
+        <label class="field">
+          <span data-i18n="formRole">عايز تنضم كـ</span>
+          <select name="role" id="roleSelect">
+            <option value="participant" data-i18n="roleParticipant">مشاركة</option>
+            <option value="volunteer" data-i18n="roleVolunteer">متطوع / متطوعة</option>
+            <option value="trainer" data-i18n="roleTrainer">مدرب / منتور</option>
+            <option value="speaker" data-i18n="roleSpeaker">Speaker</option>
+            <option value="partner" data-i18n="rolePartner">شريك / جهة</option>
+            <option value="other" data-i18n="roleOther">سؤال أو استفسار</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-row">
+        <label class="field">
+          <span data-i18n="formEmail">الإيميل</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" dir="ltr">
+        </label>
+        <label class="field">
+          <span data-i18n="formPhone">رقم الموبايل (اختياري)</span>
+          <input type="tel" name="phone" autocomplete="tel" placeholder="01xxxxxxxxx" dir="ltr">
+        </label>
+      </div>
+      <label class="field">
+        <span data-i18n="formMessage">رسالتك</span>
+        <textarea name="message" rows="5" required data-i18n-ph="formMessagePh" placeholder="احكيلنا عنك وعن اللي حابب تعمله مع نايلة..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" data-i18n="formSubmit">ابعت لنايلة ✉️</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="nubian-band nubian-band-flip" aria-hidden="true"></div>
+  <div class="container footer-grid">
     <div class="footer-brand">
-      <div class="logo"><span>✨</span> Nayla</div>
-      <p>STEAM Like a Girl</p>
-      <div class="social-links">
-        <a class="social-link" href="#">𝕏</a>
-        <a class="social-link" href="#">in</a>
-        <a class="social-link" href="#">⌥</a>
-      </div>
+      <a class="brand brand-light" href="#top">
+        <span class="brand-mark">N</span>
+        <span class="brand-text"><strong>Nayla</strong><small>STEAM Like a Girl</small></span>
+      </a>
+      <p data-i18n="footerAbout">مبادرة من بنات أسوان بتوصّل فرص الـ STEAM لبنات الصعيد. جزء من شبكة Girl Up MENA.</p>
     </div>
     <div class="footer-col">
-      <h5>Support</h5>
-      <ul>
-        <li><span>naylasteamaswan@gmail.com</span></li>
-        <li><span>01157320251</span></li>
-      </ul>
+      <h5 data-i18n="footerExplore">استكشف</h5>
+      <a href="#about" data-i18n="navAbout">عن نايلة</a>
+      <a href="#programs" data-i18n="navPrograms">البرامج</a>
+      <a href="#impact" data-i18n="navImpact">أثرنا</a>
+      <a href="#team" data-i18n="navTeam">الفريق</a>
     </div>
     <div class="footer-col">
-      <h5>Community</h5>
-      <ul>
-        <li><a href="#">Join as Participant</a></li>
-        <li><a href="#">Join as Volunteer</a></li>
-      </ul>
+      <h5 data-i18n="footerJoin">انضم</h5>
+      <a href="#join" data-role="participant" data-i18n="roleParticipant">مشاركة</a>
+      <a href="#join" data-role="volunteer" data-i18n="roleVolunteer">متطوع / متطوعة</a>
+      <a href="#join" data-role="trainer" data-i18n="roleTrainer">مدرب / منتور</a>
+      <a href="#join" data-role="partner" data-i18n="rolePartner">شريك / جهة</a>
     </div>
     <div class="footer-col">
-      <h5>Quick Links</h5>
-      <ul>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Subjects">Programs</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
+      <h5 data-i18n="footerFollow">تابعنا</h5>
+      <a href="https://instagram.com/nayla_stemaswan" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linktr.ee/naylasteam" target="_blank" rel="noopener">Linktree</a>
+      <a href="mailto:naylasteamaswan@gmail.com">Email</a>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 Nayla | STEAM Like a Girl. All rights reserved.</span>
-    <span>Made with ❤️ for girls in Upper Egypt</span>
+  <div class="container footer-bottom">
+    <span data-i18n="footerRights">© 2026 نايلة | STEAM Like a Girl</span>
+    <span data-i18n="footerMade">معمول بحب 💜 لبنات الصعيد</span>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-(function(){
-  emailjs.init("gEWHQJAw0wEoXuQYP");
-})();
-</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+<script src="data.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>

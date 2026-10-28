@@ -1,415 +1,370 @@
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
-});
+/* ============================================================
+   Nayla — site behaviour + Arabic / English text
+   Content (programs, team, partners, numbers) lives in data.js
+   ============================================================ */
 
-// Reveal on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-    }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const D = window.NAYLA_DATA;
 
+/* ---------- UI text ---------- */
 const i18n = {
-  en: {
-    langToggle: 'AR',
-    brandName: 'Nayla',
-    brandTagline: 'STEAM Like a Girl',
-    navHome: 'Home',
-    navPrograms: 'Programs',
-    navTeam: 'Team Members',
-    navAbout: 'About',
-    navContact: 'Contact',
-    navJoin: 'Join Us',
-    navLearn: 'Learn More',
-    heroBadge: 'Empowering Girls in Aswan Through STEAM',
-    heroTitle: 'Nayla | STEAM Like a Girl',
-    heroText: '<span>Empowering girls in Aswan</span> through online sessions, offline events, and real opportunities. Our mission is to expand access for girls in Upper Egypt and build a strong <bdi>community</bdi> where girls support each other.',
-    heroJoin: 'Join Us',
-    heroLearn: 'Learn More',
-    aboutTag: 'About Nayla',
-    aboutTitle: 'A Girls-Led Initiative <span>From Aswan</span>',
-    aboutBody: 'We are a girls-led initiative from Aswan focused on opening STEAM opportunities for every girl. As part of Girl Up MENA, we create safe spaces where girls can learn, lead, and grow together.',
-    feat1Title: 'Empowerment First',
-    feat1Body: 'We work so every girl feels confident entering STEAM fields.',
-    feat2Title: 'Girl Up MENA Network',
-    feat2Body: "Connected to a regional movement that supports girls' leadership and impact.",
-    feat3Title: 'Community & Belonging',
-    feat3Body: 'Online and offline in Aswan, we learn together and support each other.',
-    statsGirls: 'Girls Reached',
-    statsSessions: 'Sessions Held',
-    statsVolunteers: 'Volunteers',
-    statsEvents: 'Aswan Events',
-    subjectsTag: 'Programs',
-    subjectsTitle: 'Our Programs',
-    subjectsDesc: 'Practical learning tracks designed to open real STEAM opportunities for girls in Upper Egypt.',
-    subjectTitles: [
-      'Programming',
-      'Engineering Basics',
-      'Science Workshops',
-      'Personal Development',
-      'Career Exploration',
-      'Community Projects'
-    ],
-    subjectBodies: [
-      'Learn coding basics and build real projects in a friendly, beginner-safe environment.',
-      'Discover how engineering works through simple challenges and creative teamwork.',
-      'Hands-on activities that make science fun, practical, and easy to relate to daily life.',
-      'Build confidence, leadership, and communication skills for school, university, and beyond.',
-      'Meet women in STEAM careers and explore pathways that fit your passion.',
-      'Girls-led initiatives that turn ideas into local impact across Aswan.'
-    ],
-    subjectMeta: ['Girls', 'Sessions', 'Girls', 'Sessions', 'Girls', 'Workshops', 'Girls', 'Circles', 'Girls', 'Talks', 'Girls', 'Projects'],
-    teamTag: 'Team Members',
-    teamTitle: 'Meet Our Team Members',
-    teamDesc: 'Supportive role models from engineering, universities, and volunteering communities.',
-    teacherSubjects: [
-      'Programming Mentor',
-      'Programming Mentor',
-      'Programming Mentor',
-      'Volunteer Mentor',
-      'Volunteer Mentor',
-      'High School Student',
-      'High School Student',
-      'High School Student',
-      'High School Student',
-      'High School Student'
-    ],
-    teacherExp: [
-      '⭐ Software Engineer',
-      '⭐ Engineer',
-      '⭐ Community Lead',
-      '⭐ Mentor',
-      '⭐ University Student',
-      '⭐ Content Writing',
-      '⭐ Organization & Management',
-      '⭐ Design',
-      '⭐ Communication & Outreach',
-      '⭐ Communication & Outreach'
-    ],
-    teacherBio: [
-      'Guides girls in problem-solving and Programming thinking in many Domains.',
-      'Connects technical skills to real-life community solutions.',
-      'Builds a safe and inspiring space for every participant.',
-      'Guides girls in their learning journey.',
-      'Empowering girls with essential soft skills to grow, communicate, and succeed in real life. From confidence to career readiness, learn it, practice it, live it.',
-      'Creates engaging content to inspire and inform the Nayla community.',
-      'Organizes and manages various initiatives within the Nayla community.',
-      "Designs visually appealing materials to support Nayla's initiatives.",
-      'Communicates with the Nayla community and organizes outreach initiatives.',
-      'Communicates with students and organizes outreach initiatives.'
-    ],
-    foundersTag: 'Founders',
-    foundersTitle: 'Meet the Founders 💜',
-    foundersDesc: 'Two passionate young leaders building Nayla to empower girls in Aswan through community, innovation, and STEAM.',
-    founderRole: 'Founder of Nayla',
-    founderBio1: "Hi, I'm Malak 👋<br>A high school student passionate about technology, community work, and building ideas that create real impact.<br><br>I've been part of experiences like Samsung Innovation Campus and Girls Make Program, working on projects, organizing sessions, and volunteering.<br><br>I'm especially interested in solving real-life problems in student life, accessibility, and mental well-being.<br><br>Still learning, still growing, and always ready for new challenges 🚀",
-    founderBio2: "Hi, I'm Taqwa 👋<br>I'm passionate about technology &amp; innovation, with skills in programming, graphic design, and cybersecurity.<br><br>I've delivered awareness sessions across Aswan to promote programming and AI.<br><br>Currently, I'm a General Coordinator at the Egyptian Inventors Syndicate and a Girls Make graduate.",
-    contactTag: 'Contact',
-    contactTitle: "Let's Build This Together!<br>We'd Love to Hear from You 💜",
-    contactDesc: 'Have a question, want to join, or interested in collaborating with Nayla? Send us a message anytime — we are one community.',
-    contactLocation: 'Aswan, Egypt (Online + Offline Events)',
-    formFirstName: 'First Name',
-    formLastName: 'Last Name',
-    formEmail: 'Email',
-    formMessage: 'Message',
-    formFirstNamePh: 'Your name',
-    formLastNamePh: 'Family name',
-    formEmailPh: 'you@example.com',
-    formMessagePh: 'Say hello to Nayla community...',
-    formSubmit: 'Send to Nayla ✉️',
-    footerSupport: 'Support',
-    footerCommunity: 'Community',
-    footerQuickLinks: 'Quick Links',
-    footerJoinParticipant: 'Join as Participant',
-    footerJoinVolunteer: 'Join as Volunteer',
-    footerAbout: 'About',
-    footerPrograms: 'Programs',
-    footerContact: 'Contact',
-    footerRights: '© 2026 Nayla | STEAM Like a Girl. All rights reserved.',
-    footerMade: 'Made with ❤️ for girls in Upper Egypt',
-    formSuccess: '✅ Message Sent!',
-    formError: 'Error sending ❌'
-  },
   ar: {
-    langToggle: 'EN',
-    brandName: 'نايلا',
-    brandTagline: 'STEAM للبنات',
-    navHome: 'الرئيسية',
-    navPrograms: 'البرامج',
-    navTeam: 'فريقنا',
-    navAbout: 'من نحن',
-    navContact: 'تواصل معنا',
-    navJoin: 'انضمي إلينا',
-    navLearn: 'اعرفي أكثر',
-    heroBadge: 'تمكين بنات أسوان من خلال مجالات STEAM',
-    heroTitle: 'نايلا | STEAM للبنات',
-    heroText: '<span>نمكّن بنات أسوان</span> من خلال محاضرات أونلاين، فعاليات على الأرض، وفرص حقيقية. هدفنا نوصل الفرص لبنات الصعيد ونبني <bdi>community</bdi> قوية من بنات لبعض.',
-    heroJoin: 'انضمي إلينا',
-    heroLearn: 'اعرفي أكثر',
-    aboutTag: 'عن نايلا',
-    aboutTitle: 'مبادرة تقودها البنات <span>من أسوان</span>',
-    aboutBody: 'إحنا مبادرة من بنات أسوان هدفنا نوصل فرص STEAM لكل بنت. وكجزء من Girl Up MENA بنخلق مساحات آمنة تتعلم فيها البنات وتكبر وتقود.',
-    feat1Title: 'التمكين أولًا',
-    feat1Body: 'بنشتغل عشان كل بنت تحس إنها قادرة تدخل مجالات STEAM بثقة.',
-    feat2Title: 'شبكة Girl Up MENA',
-    feat2Body: 'متصلين بحركة إقليمية تدعم قيادة البنات وتأثيرهم في المجتمع.',
-    feat3Title: 'المجتمع والانتماء',
-    feat3Body: 'أونلاين وأوفلاين في أسوان، بنتعلم مع بعض وبندعم بعض.',
-    statsGirls: 'بنت وصلنا لها',
-    statsSessions: 'محاضرهات قدمناها',
-    statsVolunteers: 'متطوعة',
-    statsEvents: 'فعاليات في أسوان',
-    subjectsTag: 'البرامج',
-    subjectsTitle: 'برامجنا',
-    subjectsDesc: 'مسارات عملية بتفتح فرص حقيقية في مجالات STEAM لبنات الصعيد.',
-    subjectTitles: [
-      'البرمجة',
-      'أساسيات الهندسة',
-      'ورش العلوم',
-      'التطوير الشخصي',
-      'الاستكشاف المهني',
-      'مشاريع مجتمعية'
-    ],
-    subjectBodies: [
-      'اتعلمي أساسيات الكود وابني مشاريع حقيقية في بيئة آمنة للمبتدئات.',
-      'اكتشفي عالم الهندسة من خلال تحديات بسيطة وتعاون إبداعي.',
-      'أنشطة عملية تخلي العلوم ممتعة وقريبة من حياتك اليومية.',
-      'ابني ثقتك ومهارات القيادة والتواصل للمدرسة والجامعة وما بعدهم.',
-      'اتعرفي على نماذج نسائية في مجالات STEAM واستكشفي المسار المناسب ليكي.',
-      'مبادرات تقودها البنات لتحويل الأفكار إلى أثر حقيقي في أسوان.'
-    ],
-    subjectMeta: ['بنت', 'محاضرات', 'بنت', 'محاضرات', 'بنت', 'ورش', 'بنت', 'دوائر', 'بنت', 'لقاءات', 'بنت', 'مشاريع'],
-    teamTag: 'فريقنا',
-    teamTitle: 'تعرّفي على فريقنا',
-    teamDesc: 'قدوات داعمة من مجالات الهندسة والجامعات والعمل التطوعي.',
-    teacherSubjects: [
-      'مرشد برمجة',
-      'مرشد برمجة',
-      'مرشدة برمجة',
-      'مرشدة متطوعة',
-      'مرشدة متطوعة',
-      'طالبة ثانوي',
-      'طالبة ثانوي',
-      'طالبة ثانوي',
-      'طالبة ثانوي',
-      'مهندسه طاقه '
-    ],
-    teacherExp: [
-      '⭐ مهندس برمجيات',
-      '⭐ مهندس',
-      '⭐ قائدة مجتمعية',
-      '⭐ مرشدة',
-      '⭐ طالبة جامعية',
-      '⭐ كتابة المحتوى',
-      '⭐ التنظيم والإدارة',
-      '⭐ التصميم',
-      '⭐ التواصل والتوعية',
-      '⭐ التواصل والتوعية'
-    ],
-    teacherBio: [
-      'يرشد البنات في حل المشكلات والتفكير البرمجي في مجالات متعددة.',
-      'يربط المهارات التقنية بحلول واقعية تخدم المجتمع.',
-      'تبني مساحة آمنة وملهمة لكل مشاركة.',
-      'تدعم البنات في رحلتهم التعليمية خطوة بخطوة.',
-      'تمكّن البنات بمهارات شخصية أساسية للنمو والتواصل والنجاح في الحياة.',
-      'تقدّم محتوى جذابًا يلهم مجتمع نايلا ويثريه.',
-      'تنظم وتدير مبادرات متنوعة داخل مجتمع نايلا.',
-      'تصمم مواد بصرية مميزة لدعم مبادرات نايلا.',
-      'تتواصل مع مجتمع نايلا وتنظم مبادرات التوعية.',
-      'تتواصل مع الطالبات وتنظم مبادرات التوعية.'
-    ],
-    foundersTag: 'المؤسسات',
-    foundersTitle: 'تعرّفي على المؤسِسات 💜',
-    foundersDesc: 'قائدتان شابتان بتبنوا نايلة لتمكين بنات أسوان بالمجتمع والابتكار ومجالات STEAM.',
-    founderRole: 'مؤسسة نايلا',
-    founderBio1: 'مرحبًا، أنا ملك 👋<br>طالبة في المرحلة الثانوية، شغوفة بالتكنولوجيا والعمل المجتمعي وبناء أفكار تصنع أثرًا حقيقيًا.<br><br>شاركت في تجارب مثل Samsung Innovation Campus وGirls Make Program، وعملت على مشاريع وتنظيم محاضرات وأنشطة تطوعية.<br><br>أهتم بحل مشكلات واقعية تخص حياة الطالبات، وإتاحة الوصول، والصحة النفسية.<br><br>ما زلت أتعلم وأتطور ودائمًا مستعدة لتحديات جديدة 🚀',
-    founderBio2: 'مرحبًا، أنا تقوى 👋<br>شغوفة بالتكنولوجيا والابتكار، وعندي مهارات في البرمجة والتصميم الجرافيكي والأمن السيبراني.<br><br>قدمت محاضرات توعوية في أسوان لنشر الوعي بالبرمجة والذكاء الاصطناعي.<br><br>حاليًا أعمل كمنسق عام في نقابة المخترعين المصريين، وأنا خريجة برنامج Girls Make.',
-    contactTag: 'تواصل معنا',
-    contactTitle: 'خلّينا نبني ده سوا!<br>يسعدنا نسمع منك 💜',
-    contactDesc: 'عندك سؤال؟ حابة تنضمي؟ أو عايزة تتعاوني مع نايلة؟ ابعتيلنا في أي وقت — إحنا مجتمع واحد.',
-    contactLocation: 'أسوان، مصر (فعاليات أونلاين وأوفلاين)',
-    formFirstName: 'الاسم الأول',
-    formLastName: 'اسم العائلة',
-    formEmail: 'البريد الإلكتروني',
-    formMessage: 'الرسالة',
-    formFirstNamePh: 'اكتبي اسمك',
-    formLastNamePh: 'اسم العائلة',
-    formEmailPh: 'you@example.com',
-    formMessagePh: 'ابعتي رسالة لفريق نايلا...',
-    formSubmit: 'إرسال إلى نايلا ✉️',
-    footerSupport: 'الدعم',
-    footerCommunity: 'المجتمع',
-    footerQuickLinks: 'روابط سريعة',
-    footerJoinParticipant: 'انضمي كمشاركة',
-    footerJoinVolunteer: 'انضمي كمتطوعة',
-    footerAbout: 'من نحن',
-    footerPrograms: 'البرامج',
-    footerContact: 'تواصل معنا',
-    footerRights: '© 2026 نايلا | STEAM للبنات. جميع الحقوق محفوظة.',
-    footerMade: 'صُنع بحب ❤️ لبنات الصعيد',
-    formSuccess: '✅ تم إرسال الرسالة!',
-    formError: 'حدث خطأ في الإرسال ❌'
+    skip: 'تخطي للمحتوى',
+    navAbout: 'عن نايلة', navPrograms: 'البرامج', navImpact: 'أثرنا', navTeam: 'الفريق',
+    navPartners: 'الشركاء', navContact: 'تواصل', navJoin: 'انضم لنايلة',
+
+    heroEyebrow: 'مبادرة من بنات أسوان · جزء من Girl Up MENA',
+    heroTitle: 'بنفتح أبواب الـ STEAM لكل بنت في الصعيد',
+    heroLead: 'برامج وكورسات وورش مجانية — أونلاين وأوفلاين في أسوان — في البرمجة، والتسويق، والتصميم، والبحث العلمي، والجاهزية لسوق العمل. ومجتمع من البنات بيدعم بعضه.',
+    heroCta1: 'اكتشف البرامج', heroCta2: 'انضم لينا',
+    statParticipants: 'مشارِكة ومشارك', statPrograms: 'برامج وورش', statTeam: 'عضو في الفريق',
+    chip1: '💻 Code with Nayla', chip2: '📍 أسوان + أونلاين', chip3: '✨ مجاني بالكامل',
+
+    aboutTag: 'عن نايلة',
+    aboutTitle: 'مبادرة بتقودها البنات، من أسوان',
+    aboutBody1: 'نايلة مبادرة أسستها بنات من أسوان عشان توصّل فرص التعلم في مجالات الـ STEAM — العلوم والتكنولوجيا والهندسة والفنون والرياضيات — لبنات أسوان والصعيد، اللي غالبًا الفرص دي مش بتوصلهم.',
+    aboutBody2: 'كجزء من شبكة Girl Up MENA، بنعمل برامج أونلاين وفعاليات على الأرض في أسوان، وبنبني مساحة آمنة البنت تتعلم فيها وتجرب وتقود.',
+    visionTitle: 'رؤيتنا',
+    visionBody: 'إن كل بنت في أسوان والصعيد يبقى عندها فرصة حقيقية تدخل مجالات الـ STEAM بثقة، وتبني مستقبلها اللي تختاره.',
+    missionTitle: 'رسالتنا',
+    missionBody: 'نوصّل برامج تعليمية وتدريبية مجانية — أونلاين وأوفلاين — لبنات الصعيد، ونبني مجتمع من البنات بيدعم بعضه.',
+    goalsTitle: 'أهدافنا',
+    goal1Title: 'نعرّف بمجالات الـ STEAM', goal1Body: 'نكسر الصورة إن المجالات دي "مش للبنات"، ونعرض قصص نجاح قريبة منهم.',
+    goal2Title: 'نعلّم مهارات عملية', goal2Body: 'برمجة، تسويق رقمي، تصميم، وبحث علمي — بتطبيق حقيقي من أول يوم.',
+    goal3Title: 'نجهّز للفرص وسوق العمل', goal3Body: 'من التقديم على معسكرات عالمية لحد خبرة تطوعية تتضاف للـ CV.',
+    goal4Title: 'نبني مجتمع وشبكة', goal4Body: 'بنات بيدعموا بعض، وشراكات مع مؤسسات بتفتح أبواب جديدة.',
+
+    programsTag: 'البرامج', programsTitle: 'اللي بنقدمه',
+    programsDesc: 'كل برامجنا مجانية ومصممة للمبتدئين — مش محتاج خبرة سابقة، محتاج بس تبدأ.',
+    filterAll: 'الكل', filterCore: 'برامج ممتدة', filterCourse: 'كورسات', filterWorkshop: 'ورش وجلسات',
+    typeCore: 'برنامج ممتد', typeCourse: 'كورس', typeWorkshop: 'ورشة / جلسة',
+    participantsLabel: 'مشارك',
+
+    impactTag: 'أثرنا', impactTitle: 'أثرنا بالأرقام',
+    impactDesc: 'أرقام تقريبية لعدد المشاركين في برامجنا وورشنا لحد دلوقتي.',
+    statParticipantsLong: 'مشارك ومشاركة في برامجنا', statProgramsLong: 'برامج وكورسات وورش',
+    statTeamLong: 'عضو في فريق نايلة', statPartnersLong: 'شركاء ومؤسسات متعاونة',
+    barsTitle: 'المشاركين في كل برنامج',
+
+    teamTag: 'الفريق', teamTitle: 'الناس اللي ورا نايلة',
+    teamDesc: 'فريق من {team} عضو — طالبات ومهندسين ومتطوعين — بيشتغلوا عشان كل بنت تلاقي فرصتها.',
+    foundersTitle: 'المؤسِّسات', founderRole: 'مؤسِّسة نايلة', membersTitle: 'من فريقنا',
+
+    partnersTag: 'الشركاء', partnersTitle: 'شركاء النجاح',
+    partnersDesc: 'مؤسسات وجهات اشتغلنا معاها عشان نوصّل الفرص لبنات أكتر.',
+    collabTitle: 'عايز تتعاون مع نايلة؟',
+    collabBody: 'بنرحب بالشركات والمؤسسات والمساحات اللي حابة تدعم بنات الصعيد. ممكن نتعاون في:',
+    collab1: '🏫 استضافة برنامج أو توفير مكان في أسوان',
+    collab2: '💻 توفير أجهزة أو أدوات للمشاركات',
+    collab3: '🎤 تقديم جلسة أو ورشة من خبرائكم',
+    collab4: '💼 فرص تدريب (Internships) أو منح',
+    collab5: '🤝 رعاية برنامج أو دعم شهاداته',
+    collabCta: 'ابدأ شراكة معانا',
+
+    joinTag: 'انضم لينا', joinTitle: 'فيه مكان ليك في نايلة',
+    joinDesc: 'اختار الطريقة اللي تناسبك، واملا الفورم، وفريقنا هيتواصل معاك.',
+    roleParticipant: 'مشاركة', roleParticipantBody: 'سجلي في برامجنا وورشنا الجاية',
+    roleVolunteer: 'متطوع / متطوعة', roleVolunteerBody: 'ساعد في التنظيم والمحتوى والتصميم والتواصل',
+    roleTrainer: 'مدرب / منتور', roleTrainerBody: 'علّم مهارة أو تابع البنات في رحلتهم',
+    roleSpeaker: 'Speaker', roleSpeakerBody: 'شارك قصتك أو خبرتك في جلسة ملهمة',
+    rolePartner: 'شريك / جهة', rolePartnerBody: 'مؤسسة أو شركة حابة تتعاون معانا',
+    roleOther: 'سؤال أو استفسار',
+
+    contactTag: 'تواصل', contactTitle: 'يلا نبني ده سوا 💜',
+    contactDesc: 'عندك سؤال، أو حابب تنضم، أو عايز تتعاون معانا؟ ابعتلنا وهنرد عليك في أقرب وقت.',
+    contactLocation: 'أسوان، مصر — فعاليات أونلاين وأوفلاين',
+    formName: 'الاسم', formNamePh: 'اسمك بالكامل', formRole: 'عايز تنضم كـ',
+    formEmail: 'الإيميل', formPhone: 'رقم الموبايل (اختياري)',
+    formMessage: 'رسالتك', formMessagePh: 'احكيلنا عنك وعن اللي حابب تعمله مع نايلة...',
+    formSubmit: 'ابعت لنايلة ✉️', formSending: 'جاري الإرسال...',
+    formSuccess: '✅ وصلتنا رسالتك! هنتواصل معاك قريب.',
+    formError: 'حصلت مشكلة في الإرسال. جرّب تاني أو ابعتلنا على naylasteamaswan@gmail.com',
+    formInvalid: 'من فضلك اكتب اسمك وإيميل صحيح ورسالتك.',
+
+    footerAbout: 'مبادرة من بنات أسوان بتوصّل فرص الـ STEAM لبنات الصعيد. جزء من شبكة Girl Up MENA.',
+    footerExplore: 'استكشف', footerJoin: 'انضم', footerFollow: 'تابعنا',
+    footerRights: '© 2026 نايلة | STEAM Like a Girl',
+    footerMade: 'معمول بحب 💜 لبنات الصعيد'
+  },
+
+  en: {
+    skip: 'Skip to content',
+    navAbout: 'About', navPrograms: 'Programs', navImpact: 'Impact', navTeam: 'Team',
+    navPartners: 'Partners', navContact: 'Contact', navJoin: 'Join Nayla',
+
+    heroEyebrow: 'A girls-led initiative from Aswan · Part of Girl Up MENA',
+    heroTitle: 'Opening the doors of STEAM to every girl in Upper Egypt',
+    heroLead: 'Free programs, courses and workshops — online and offline in Aswan — in coding, marketing, design, scientific research and career readiness. And a community of girls who lift each other up.',
+    heroCta1: 'Explore programs', heroCta2: 'Join us',
+    statParticipants: 'participants', statPrograms: 'programs & workshops', statTeam: 'team members',
+    chip1: '💻 Code with Nayla', chip2: '📍 Aswan + Online', chip3: '✨ 100% free',
+
+    aboutTag: 'About Nayla',
+    aboutTitle: 'A girls-led initiative from Aswan',
+    aboutBody1: 'Nayla was founded by girls from Aswan to bring STEAM learning — Science, Technology, Engineering, Arts and Math — to girls in Aswan and Upper Egypt, where these opportunities rarely reach.',
+    aboutBody2: 'As part of the Girl Up MENA network, we run online programs and in-person events in Aswan, building a safe space where girls can learn, experiment and lead.',
+    visionTitle: 'Our vision',
+    visionBody: 'Every girl in Aswan and Upper Egypt has a real chance to enter STEAM with confidence and build the future she chooses.',
+    missionTitle: 'Our mission',
+    missionBody: 'Deliver free learning and training programs — online and offline — to girls in Upper Egypt, and build a community of girls who support each other.',
+    goalsTitle: 'Our goals',
+    goal1Title: 'Introduce STEAM', goal1Body: 'Break the idea that these fields are "not for girls", with success stories close to home.',
+    goal2Title: 'Teach practical skills', goal2Body: 'Coding, digital marketing, design and research — hands-on from day one.',
+    goal3Title: 'Prepare for opportunities', goal3Body: 'From applying to global camps to volunteer experience that strengthens a CV.',
+    goal4Title: 'Build community & network', goal4Body: 'Girls supporting girls, and partnerships that open new doors.',
+
+    programsTag: 'Programs', programsTitle: 'What we offer',
+    programsDesc: 'All our programs are free and beginner-friendly — no experience needed, just the will to start.',
+    filterAll: 'All', filterCore: 'Core programs', filterCourse: 'Courses', filterWorkshop: 'Workshops & sessions',
+    typeCore: 'Core program', typeCourse: 'Course', typeWorkshop: 'Workshop / session',
+    participantsLabel: 'participants',
+
+    impactTag: 'Impact', impactTitle: 'Our impact in numbers',
+    impactDesc: 'Approximate participant numbers across our programs and workshops so far.',
+    statParticipantsLong: 'participants in our programs', statProgramsLong: 'programs, courses & workshops',
+    statTeamLong: 'Nayla team members', statPartnersLong: 'partner organizations',
+    barsTitle: 'Participants per program',
+
+    teamTag: 'Team', teamTitle: 'The people behind Nayla',
+    teamDesc: 'A team of {team} — students, engineers and volunteers — working so every girl finds her opportunity.',
+    foundersTitle: 'Founders', founderRole: 'Co-founder of Nayla', membersTitle: 'Meet the team',
+
+    partnersTag: 'Partners', partnersTitle: 'Our partners',
+    partnersDesc: 'Organizations we have worked with to reach more girls.',
+    collabTitle: 'Want to partner with Nayla?',
+    collabBody: 'We welcome companies, organizations and spaces that want to support girls in Upper Egypt. We can work together on:',
+    collab1: '🏫 Hosting a program or offering a venue in Aswan',
+    collab2: '💻 Providing laptops or tools for participants',
+    collab3: '🎤 A session or workshop led by your experts',
+    collab4: '💼 Internships or scholarships',
+    collab5: '🤝 Sponsoring a program or its certificates',
+    collabCta: 'Start a partnership',
+
+    joinTag: 'Join us', joinTitle: 'There’s a place for you at Nayla',
+    joinDesc: 'Pick how you want to get involved, fill in the form, and our team will reach out.',
+    roleParticipant: 'Participant', roleParticipantBody: 'Sign up for our upcoming programs',
+    roleVolunteer: 'Volunteer', roleVolunteerBody: 'Help with organizing, content, design or outreach',
+    roleTrainer: 'Trainer / Mentor', roleTrainerBody: 'Teach a skill or guide girls on their journey',
+    roleSpeaker: 'Speaker', roleSpeakerBody: 'Share your story or expertise in a session',
+    rolePartner: 'Partner organization', rolePartnerBody: 'A company or organization that wants to collaborate',
+    roleOther: 'Question / other',
+
+    contactTag: 'Contact', contactTitle: 'Let’s build this together 💜',
+    contactDesc: 'Have a question, want to join, or want to collaborate? Send us a message and we’ll get back to you soon.',
+    contactLocation: 'Aswan, Egypt — online & offline events',
+    formName: 'Name', formNamePh: 'Your full name', formRole: 'I want to join as',
+    formEmail: 'Email', formPhone: 'Phone (optional)',
+    formMessage: 'Message', formMessagePh: 'Tell us about yourself and what you’d like to do with Nayla...',
+    formSubmit: 'Send to Nayla ✉️', formSending: 'Sending...',
+    formSuccess: '✅ Message received! We’ll be in touch soon.',
+    formError: 'Something went wrong. Please try again or email naylasteamaswan@gmail.com',
+    formInvalid: 'Please add your name, a valid email and a message.',
+
+    footerAbout: 'A girls-led initiative from Aswan bringing STEAM opportunities to girls in Upper Egypt. Part of the Girl Up MENA network.',
+    footerExplore: 'Explore', footerJoin: 'Join', footerFollow: 'Follow',
+    footerRights: '© 2026 Nayla | STEAM Like a Girl',
+    footerMade: 'Made with 💜 for girls in Upper Egypt'
   }
 };
 
-let currentLang = localStorage.getItem('lang') || 'ar';
+/* ---------- helpers ---------- */
+let lang = 'ar';
+try { lang = localStorage.getItem('lang') || 'ar'; } catch (e) {}
+if (!i18n[lang]) lang = 'ar';
 
-function setText(selector, value, index) {
-  const nodes = document.querySelectorAll(selector);
-  const node = typeof index === 'number' ? nodes[index] : nodes[0];
-  if (node) node.textContent = value;
-}
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const pick = (v) => (v && typeof v === 'object' && !Array.isArray(v)) ? (v[lang] ?? v.en) : v;
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const fmt = (n) => n.toLocaleString('en-US');
 
-function setHTML(selector, value, index) {
-  const nodes = document.querySelectorAll(selector);
-  const node = typeof index === 'number' ? nodes[index] : nodes[0];
-  if (node) node.innerHTML = value;
-}
+const totalParticipants = D.programs.reduce((s, p) => s + (p.participants || 0), 0);
+const typeLabel = { core: 'typeCore', course: 'typeCourse', workshop: 'typeWorkshop' };
+let activeFilter = 'all';
 
-function setPlaceholder(selector, value, index) {
-  const nodes = document.querySelectorAll(selector);
-  const node = typeof index === 'number' ? nodes[index] : nodes[0];
-  if (node) node.placeholder = value;
-}
-
-function setTextList(selector, values) {
-  if (!Array.isArray(values)) return;
-  const nodes = document.querySelectorAll(selector);
-  values.forEach((value, index) => {
-    if (nodes[index]) nodes[index].textContent = value;
-  });
-}
-
-function applyLanguage(lang) {
+/* ---------- renderers ---------- */
+function renderPrograms() {
   const t = i18n[lang];
-  if (!t) return;
+  $('#programsGrid').innerHTML = D.programs.map(p => {
+    const hl = (pick(p.highlights) || []);
+    return `
+    <article class="program-card" data-type="${p.type}" ${activeFilter !== 'all' && activeFilter !== p.type ? 'hidden' : ''}>
+      <div class="pc-top">
+        <span class="pc-icon">${p.icon}</span>
+        <span class="pc-type pc-${p.type}">${t[typeLabel[p.type]]}</span>
+      </div>
+      <h3 dir="auto">${esc(pick(p.title))}</h3>
+      <p class="pc-format">${esc(pick(p.format))}</p>
+      <p class="pc-desc">${esc(pick(p.desc))}</p>
+      ${hl.length ? `<ul class="pc-highlights">${hl.map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
+      <div class="pc-foot"><strong>${fmt(p.participants)}+</strong> <span>${t.participantsLabel}</span></div>
+    </article>`;
+  }).join('');
+}
 
-  currentLang = lang;
-  localStorage.setItem('lang', lang);
+function renderImpact() {
+  const max = Math.max(...D.programs.map(p => p.participants));
+  const sorted = [...D.programs].sort((a, b) => b.participants - a.participants);
+  $('#impactBars').innerHTML = sorted.map(p => `
+    <li>
+      <span class="bar-label">${p.icon} <bdi>${esc(pick(p.title))}</bdi></span>
+      <span class="bar-track"><span class="bar-fill" style="--w:${(p.participants / max * 100).toFixed(1)}%"></span></span>
+      <span class="bar-num">${fmt(p.participants)}</span>
+    </li>`).join('');
+
+  $$('.js-total-participants').forEach(el => el.textContent = fmt(totalParticipants) + '+');
+  $$('.js-program-count').forEach(el => el.textContent = fmt(D.programs.length));
+  $$('.js-team-size').forEach(el => el.textContent = fmt(D.teamSize));
+  $$('.js-partner-count').forEach(el => el.textContent = fmt(D.partners.length));
+}
+
+function renderTeam() {
+  const t = i18n[lang];
+  $('#foundersGrid').innerHTML = D.founders.map(f => `
+    <article class="founder">
+      <img src="${encodeURI(f.photo)}" alt="${esc(pick(f.name))}" loading="lazy">
+      <div>
+        <h4>${esc(pick(f.name))}</h4>
+        <span class="founder-role">${t.founderRole}</span>
+        <p>${esc(pick(f.bio))}</p>
+      </div>
+    </article>`).join('');
+
+  $('#teamGrid').innerHTML = D.team.map(m => `
+    <article class="member">
+      <img src="${encodeURI(m.photo)}" alt="${esc(pick(m.name))}" loading="lazy">
+      <h4>${esc(pick(m.name))}</h4>
+      <p>${esc(pick(m.role))}</p>
+    </article>`).join('');
+}
+
+function renderPartners() {
+  $('#partnersGrid').innerHTML = D.partners.map(p => {
+    const name = pick(p.name);
+    return `
+    <article class="partner">
+      <span class="partner-mark">${esc(name.trim().charAt(0))}</span>
+      <h4 dir="auto">${esc(name)}</h4>
+      <p>${esc(pick(p.note))}</p>
+    </article>`;
+  }).join('');
+}
+
+function applyLanguage(next) {
+  lang = next;
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+  const t = i18n[lang];
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-  setText('#langToggle', t.langToggle);
-  setHTML('.nav-logo', '<span>📚</span> ' + t.brandName);
-  setText('.nav-links a', t.navHome, 0);
-  setText('.nav-links a', t.navPrograms, 1);
-  setText('.nav-links a', t.navTeam, 2);
-  setText('.nav-links a', t.navAbout, 3);
-  setText('.nav-links a', t.navContact, 4);
-  setText('.nav-actions a', t.navJoin, 0);
-  setText('.nav-actions a', t.navLearn, 1);
-
-  setText('.hero-badge', t.heroBadge);
-  setText('.hero-brand-box p', t.brandTagline);
-  setText('.hero-text-block h2 span', t.heroTitle, 0);
-  setHTML('.hero-text-block h2', t.heroText, 1);
-  setText('.hero-actions a', t.heroJoin, 0);
-  setText('.hero-actions a', t.heroLearn, 1);
-
-  setText('#About .section-tag', t.aboutTag);
-  setHTML('#About .about-text h2', t.aboutTitle);
-  setText('#About .about-text > p', t.aboutBody);
-  setText('#About .feature-item h4', t.feat1Title, 0);
-  setText('#About .feature-item p', t.feat1Body, 0);
-  setText('#About .feature-item h4', t.feat2Title, 1);
-  setText('#About .feature-item p', t.feat2Body, 1);
-  setText('#About .feature-item h4', t.feat3Title, 2);
-  setText('#About .feature-item p', t.feat3Body, 2);
-
-  setText('#About .about-stat-card .lbl', t.statsGirls, 0);
-  setText('#About .about-stat-card .lbl', t.statsSessions, 1);
-  setText('#About .about-stat-card .lbl', t.statsVolunteers, 2);
-  setText('#About .about-stat-card .lbl', t.statsEvents, 3);
-
-  setText('#Subjects .section-tag', t.subjectsTag);
-  setText('#Subjects .section-header h2', t.subjectsTitle);
-  setText('#Subjects .section-header p', t.subjectsDesc);
-  setTextList('#Subjects .subject-card h3', t.subjectTitles);
-  setTextList('#Subjects .subject-card p', t.subjectBodies);
-  setTextList('#Subjects .subject-card .meta-lbl', t.subjectMeta);
-
-  setText('#Teachers .section-tag', t.teamTag);
-  setText('#Teachers .section-header h2', t.teamTitle);
-  setText('#Teachers .section-header p', t.teamDesc);
-  setTextList('#Teachers .teacher-subject', t.teacherSubjects);
-  setTextList('#Teachers .teacher-exp', t.teacherExp);
-  setTextList('#Teachers .teacher-bio', t.teacherBio);
-
-  setText('#Founders .section-tag', t.foundersTag);
-  setText('#Founders .section-header h2', t.foundersTitle);
-  setText('#Founders .section-header p', t.foundersDesc);
-  setText('#Founders .founder-role', t.founderRole, 0);
-  setText('#Founders .founder-role', t.founderRole, 1);
-  setHTML('#Founders .founder-text p', t.founderBio1, 0);
-  setHTML('#Founders .founder-text p', t.founderBio2, 1);
-
-  setText('.stats-banner .lbl', t.statsGirls, 0);
-  setText('.stats-banner .lbl', t.statsSessions, 1);
-  setText('.stats-banner .lbl', t.statsVolunteers, 2);
-  setText('.stats-banner .lbl', t.statsEvents, 3);
-
-  setText('#Contact .section-tag', t.contactTag);
-  setHTML('#Contact .contact-info h2', t.contactTitle);
-  setText('#Contact .contact-info > p', t.contactDesc);
-  setText('#Contact .contact-detail span', t.contactLocation, 2);
-  setText('#Contact label', t.formFirstName, 0);
-  setText('#Contact label', t.formLastName, 1);
-  setText('#Contact label', t.formEmail, 2);
-  setText('#Contact label', t.formMessage, 3);
-  setPlaceholder('#Contact input', t.formFirstNamePh, 0);
-  setPlaceholder('#Contact input', t.formLastNamePh, 1);
-  setPlaceholder('#Contact input', t.formEmailPh, 2);
-  setPlaceholder('#Contact textarea', t.formMessagePh);
-  setText('#Contact button[type="submit"]', t.formSubmit);
-
-  setText('footer .footer-col h5', t.footerSupport, 0);
-  setText('footer .footer-col h5', t.footerCommunity, 1);
-  setText('footer .footer-col h5', t.footerQuickLinks, 2);
-  setText('footer .footer-col:nth-child(3) a', t.footerJoinParticipant, 0);
-  setText('footer .footer-col:nth-child(3) a', t.footerJoinVolunteer, 1);
-  setText('footer .footer-col:nth-child(4) a', t.footerAbout, 0);
-  setText('footer .footer-col:nth-child(4) a', t.footerPrograms, 1);
-  setText('footer .footer-col:nth-child(4) a', t.footerContact, 2);
-  setHTML('footer .footer-brand .logo', '<span>✨</span> ' + t.brandName);
-  setText('footer .footer-brand p', t.brandTagline);
-  setText('footer .footer-bottom span', t.footerRights, 0);
-  setText('footer .footer-bottom span', t.footerMade, 1);
-}
-
-const langToggle = document.getElementById('langToggle');
-if (langToggle) {
-  langToggle.addEventListener('click', () => {
-    applyLanguage(currentLang === 'en' ? 'ar' : 'en');
+  $$('[data-i18n]').forEach(el => {
+    const v = t[el.dataset.i18n];
+    if (v != null) el.textContent = v.replace('{team}', fmt(D.teamSize));
   });
+  $$('[data-i18n-ph]').forEach(el => {
+    const v = t[el.dataset.i18nPh];
+    if (v != null) el.placeholder = v;
+  });
+  $('#langToggle').textContent = lang === 'ar' ? 'EN' : 'ع';
+  $('#langToggle').setAttribute('aria-label', lang === 'ar' ? 'Switch to English' : 'التحويل للعربي');
+
+  renderPrograms();
+  renderImpact();
+  renderTeam();
+  renderPartners();
 }
 
-applyLanguage(currentLang);
+/* ---------- interactions ---------- */
+$('#langToggle').addEventListener('click', () => applyLanguage(lang === 'ar' ? 'en' : 'ar'));
 
-// Form submit
+// mobile menu
+const nav = $('#navbar');
+const menuBtn = $('#menuToggle');
+function closeMenu() { nav.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+menuBtn.addEventListener('click', () => {
+  const open = nav.classList.toggle('menu-open');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+$$('#navLinks a').forEach(a => a.addEventListener('click', closeMenu));
 
-function sendEmail(e) {
+// navbar shadow on scroll
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// program filters
+$$('.filter').forEach(btn => btn.addEventListener('click', () => {
+  activeFilter = btn.dataset.filter;
+  $$('.filter').forEach(b => {
+    const on = b === btn;
+    b.classList.toggle('is-active', on);
+    b.setAttribute('aria-selected', String(on));
+  });
+  $$('.program-card').forEach(c => { c.hidden = activeFilter !== 'all' && c.dataset.type !== activeFilter; });
+}));
+
+// any [data-role] → pre-select role in the form and jump to it
+document.addEventListener('click', (e) => {
+  const trigger = e.target.closest('[data-role]');
+  if (!trigger) return;
   e.preventDefault();
+  $('#roleSelect').value = trigger.dataset.role;
+  closeMenu();
+  $('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  setTimeout(() => $('#contactForm [name="name"]').focus({ preventScroll: true }), 500);
+});
 
+// contact form → EmailJS
+try { if (window.emailjs) emailjs.init('gEWHQJAw0wEoXuQYP'); } catch (e) {}
+
+$('#contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
   const form = e.target;
+  const f = form.elements;
+  const t = i18n[lang];
+  const status = $('#formStatus');
+  const btn = form.querySelector('button[type="submit"]');
+  const name = f.namedItem('name').value.trim();
+  const email = f.namedItem('email').value.trim();
+  const message = f.namedItem('message').value.trim();
 
-  emailjs.send("service_yodfvhf", "template_0go4iy4", {
-    from_name: form[0].value,
-    email: form[2].value,
-    message: form[3].value
-  })
-  .then(() => {
-    const btn = form.querySelector('button');
-    btn.textContent = i18n[currentLang].formSuccess;
-    btn.style.background = '#10b981';
+  status.className = 'form-status';
+  if (!name || !message || !email || !f.namedItem('email').checkValidity()) {
+    status.textContent = t.formInvalid;
+    status.classList.add('is-error');
+    return;
+  }
+
+  const roleSel = f.namedItem('role');
+  const roleText = roleSel.options[roleSel.selectedIndex].textContent;
+  const phone = f.namedItem('phone').value.trim();
+  const fullMessage = `[${roleText}]${phone ? ' · ' + phone : ''}\n\n${message}`;
+
+  if (!window.emailjs) {
+    status.textContent = t.formError;
+    status.classList.add('is-error');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = t.formSending;
+  emailjs.send('service_yodfvhf', 'template_0go4iy4', {
+    from_name: name,
+    email,
+    phone,
+    role: roleText,
+    message: fullMessage
+  }).then(() => {
+    status.textContent = t.formSuccess;
+    status.classList.add('is-success');
     form.reset();
-  })
-  .catch(() => {
-    alert(i18n[currentLang].formError);
+  }).catch(() => {
+    status.textContent = t.formError;
+    status.classList.add('is-error');
+  }).finally(() => {
+    btn.disabled = false;
+    btn.textContent = t.formSubmit;
   });
-}
+});
 
-
+/* ---------- go ---------- */
+applyLanguage(lang);
